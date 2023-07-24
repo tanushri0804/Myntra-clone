@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Gallery</title>
+    <link rel="stylesheet" href="stylep.css">
+</head>
+<body>
+     <header>
+    <nav>
+      <div class="logo">
+            <img src="https://english.cdn.zeenews.com/sites/default/files/styles/zm_700x400/public/2021/01/30/913689-1.1.4-2.jpg">
+
+      </div>
+      <div class="contents">
+        <ul>
+          <li><a href="page.html"><b>MEN</b></a></li>
+          <li><a href="page.html"><b>WOMEN</b></a></li>
+          <li><a href="page.html"><b>KIDS</b></a></li>
+          <li><a href="page.html"><b>HOME&LIVING</b></a></li>
+          <li><a href="#"><b>ABOUT</b></a></li>
+          <li><a href="#"><b>CONTACT</b></a></li>
+       </ul>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search for products, brands and more">
+        <button><img src="images\search.jpg" alt="Search"></button>
+      </div>
+      <div class="profile">
+        <img src="images\pr.jpg" alt="Profile">
+      </div>
+      <div class="wishlist">
+        <img src="images\wl.jpg" alt="Wishlist">
+      </div>
+      <div class="bag">
+        <img src="images\bag.jpg" alt="Bag">
+      </div>
+    </nav>
+  </header>
+ <div class="filter-container">
+        <label for="category-filter">Filter by Category:</label>
+        <select id="category-filter" onchange="filterProducts()">
+            <option value="all">All</option>
+            <option value="clothing">Clothing</option>
+            <option value="shoes">Shoes</option>
+            <option value="accessories">Accessories</option>
+        </select>
+    </div>
+
+    <div class="container" id="product-container">
+        <div class="product" data-category="clothing">
+            <img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/21589912/2023/1/18/895674c1-2d15-408e-943f-a42d1733d3511674014421934KALINIWomenPurpleGeometricPrintedFlaredSleevesMirrorWorkSumm1.jpg" alt="Product 1">
+            <h3>kurta set</h3>
+            <p>Libas kurta sets</p>
+            <p>Price: Rs.699</p>
+            <button class="wishlist-btn" onclick="addToWishlist('kurta set')">Add to Wishlist</button>
+        </div>
+        <div class="product" data-category="clothing">
+             <img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/17644452/2022/4/6/ef668fbb-c88a-4243-b9bd-3282d2a84afd1649238881413-Libas-Women-Kurtas-5701649238880836-1.jpg" alt="Product 2">
+            <h3>LIBAS</h3>
+            <p>Category: clothing</p>
+            <p>Price: Rs.789</p>
+            <button class="wishlist-btn" onclick="addToWishlist('LIBAS kurta')">Add to Wishlist</button>
+        </div>
+        <div class="product" data-category="clothing">
+            <img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22169482/2023/2/28/a5e56e55-1cce-4095-838f-ecb112409c5a1677593574323HERENOWWomenBlackMirrorWorkFloralGeorgetteAnarkaliKurta1.jpg" alt="Product 3">
+            <h3>ANAYNA</h3>
+            <p>Black Mirror Work Floral Georgette Anarkali Kurta</p>
+            <p>Price: Rs.550</p>
+            <button class="wishlist-btn" onclick="addToWishlist('ANAYNA kurti')">Add to Wishlist</button>
+        </div>
+        <div class="product" data-category="clothing">
+              <img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/21940458/2023/2/11/9a085e07-2a31-4cf7-beec-ac7d05ad3aaa1676107774589KALINIWomenWhiteEmbroideredStraightKurta6.jpg" alt="Product 4">
+            <h3>HERE&NOW</h3>
+            <p>White Embroidered Straight Kurta</p>
+            <p>Price: Rs.745</p>
+            <button class="wishlist-btn" onclick="addToWishlist('HERE&NOW')">Add to Wishlist</button>
+        </div>
+        <div class="product" data-category="clothing">
+            <img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/21589912/2023/1/18/b04f5120-275f-4cde-86be-56ec7390005a1674014421886KALINIWomenPurpleGeometricPrintedFlaredSleevesMirrorWorkSumm3.jpg" alt="Product 5">
+            <h3>KALINI</h3>
+            <p>Geometric Printed Flared Sleeves</p>
+            <p>Price: Rs.712</p>
+            <button class="wishlist-btn" onclick="addToWishlist('KALINI')">Add to Wishlist</button>
+        </div>
+        <div class="product" data-category="shoes">
+            <img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/19264244/2022/7/26/f23725d9-5083-452c-9982-f369060fecea1658850217723FormalShoes1.jpg" alt="Product 6">
+            <h3>BUCIK</h3>
+            <p>Formal Shoes</p>
+            <p>Price: Rs.593</p>
+            <button class="wishlist-btn" onclick="addToWishlist('BUCIK')">Add to Wishlist</button>
+    </div>
+    <div class="product" data-category="accessories">
+            <img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/16345980/2021/12/2/ffb4c65e-b1a1-427a-88eb-317a35bf82101638450997840YellowChimesBlueClassicStudsEarrings1.jpg" alt="Product 7">
+            <h3>YELLOW CHIMES</h3>
+            <p>Blue Classic Studs Earrings</p>
+            <p>Price: Rs.212</p>
+            <button class="wishlist-btn" onclick="addToWishlist('YELLOW CHIMES')">Add to Wishlist</button>
+    </div>
+    <div class="product" data-category="shoes">
+            <img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/19863074/2022/9/10/d6247d41-97aa-4ba3-90f4-601a5a294a111662783712004FormalShoes1.jpg" alt="Product 8">
+            <h3>FASHION VICTIM</h3>
+            <p>Formal Shoes</p>
+            <p>Price: Rs.629</p>
+            <button class="wishlist-btn" onclick="addToWishlist('FASHION VICTIM')">Add to Wishlist</button>
+    </div>
+    <div class="product" data-category="accessories">
+            <img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/23666058/2023/6/17/f880af9d-ad50-436e-b9fe-f351350423d51687000871140MYKIShinningCuteStarMultilayerBraceletForWomenGirlsRoseGold1.jpg" alt="Product 9">
+            <h3>MYKI</h3>
+            <p>Cute Star Multilayer Bracelet</p>
+            <p>Price: Rs.712</p>
+            <button class="wishlist-btn" onclick="addToWishlist('MYKI')">Add to Wishlist</button>
+    </div>
+    <div class="product" data-category="clothing">
+            <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/21422478/2023/6/20/c70c26cc-d1b3-45d2-9d09-842f2b73212b1687254528870-Roadster-Men-Tshirts-621687254528471-1.jpg" alt="Product 10">
+            <h3>ROADSTER</h3>
+            <p>Men Tshirts</p>
+            <p>Price: Rs.239</p>
+            <button class="wishlist-btn" onclick="addToWishlist('ROADSTER')">Add to Wishlist</button>
+    </div>
+    <div class="product" data-category="accessories">
+            <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/22998476/2023/5/3/86838d85-a104-4dd9-b34d-fb410fed6b331683111126023LOREMMenBluePrintedDialSilverTonedBraceletStyleStrapsAnalogu1.jpg" alt="Product 11">
+            <h3>LOREM</h3>
+            <p>SilverToned Bracelet</p>
+            <p>Price: Rs.549</p>
+            <button class="wishlist-btn" onclick="addToWishlist('LOREM')">Add to Wishlist</button>
+    </div>
+    <div class="product" data-category="clothing">
+            <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16680978/2022/1/4/76ee18b3-5be9-45aa-ace8-3ffc58e44aab1641296173231HIGHLANDERMenRustSlimFitCasualShirt1.jpg" alt="Product 12">
+            <h3>HIGHLANDER</h3>
+            <p>Slim Fit Casual Shirt</p>
+            <p>Price: Rs.458</p>
+            <button class="wishlist-btn" onclick="addToWishlist('HIGHLANDER')">Add to Wishlist</button>
+    </div>
+    <div class="product" data-category="shoes">
+            <img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12384728/2021/12/7/13c10ebd-e931-4d6b-9acc-a42d7438de041638893533792-Fashion-Victim-Men-Black-Solid-Formal-Slip-Ons-8316388935336-11.jpg" alt="Product 13">
+            <h3>FASHION VICTIM</h3>
+            <p>Black Solid Formal Slip-Ons</p>
+            <p>Price: Rs.607</p>
+            <button class="wishlist-btn" onclick="addToWishlist('FASHION VICTIM')">Add to Wishlist</button>
+    </div>
+    <div class="product" data-category="clothing">
+            <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/17571276/2022/11/22/904b7905-df73-4249-be91-785b550891511669119606358-Mast--Harbour-Men-Rust-Red--Navy-Blue-Striped-T-shirt-686166-1.jpg" alt="Product 14">
+            <h3>MAST & HARBOUR</h3>
+            <p>Red-NavyBlue Striped T-shirt</p>
+            <p>Price: Rs.299</p>
+            <button class="wishlist-btn" onclick="addToWishlist('MAST & HARBOUR')">Add to Wishlist</button>
+    </div>
+    <div class="product" data-category="clothing">
+            <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/17504886/2022/7/13/fd11a1a8-a777-469f-8b05-288b63086d3d1657698451322LOCOMOTIVEMenRustSlimFitCottonCasualShirt1.jpg" alt="Product 15">
+            <h3>LOCOMOTIVE</h3>
+            <p>slim fit cotton casual shirt</p>
+            <p>Price: Rs.445</p>
+            <button class="wishlist-btn" onclick="addToWishlist('LOCOMOTIVE')">Add to Wishlist</button>
+    </div>
+    <div class="product" data-category="shoes">
+             <img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/23262710/2023/5/19/f4aa5399-404f-4bd2-8e6e-ea3bb3ef5de71684479367949herbyinvictusWomenBeigePrintedBallerinasFlats1.jpg" alt="Product 16">
+            <h3>HER BY INVICTUS</h3>
+            <p>Beige Printed Ballerinas Flats</p>
+            <p>Price: Rs.499</p>
+            <button class="wishlist-btn" onclick="addToWishlist('HER BY INVICTUS')">Add to Wishlist</button>
+    </div>
+    <div class="product" data-category="accessories">
+            <img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22991746/2023/5/3/395c6266-aa32-4e37-9f0a-bef4de8cdaef1683100494612MYKIBeautifulButterflyShapependentForwomengirls1.jpg" alt="Product 17">
+            <h3>MYKI</h3>
+            <p>Butterfly Shape pendent</p>
+            <p>Price: Rs.331</p>
+            <button class="wishlist-btn" onclick="addToWishlist('MYKI')">Add to Wishlist</button>
+    </div>
+    <div class="product" data-category="accessories">
+            <img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/14940680/2021/7/26/c85ab696-a378-46a9-b511-b9424ba579461627306737990TOKYOTALKIESXrubansFASHIONACCESSORIESGold-TonedContemporaryH1.jpg" alt="Product 18">
+            <h3>TOKYOTALKIES</h3>
+            <p>Gold-Toned Contemporary accessories</p>
+            <p>Price: Rs.712</p>
+            <button class="wishlist-btn" onclick="addToWishlist('TOKYOTALKIES')">Add to Wishlist</button>
+    </div>
+    <div class="product" data-category="shoes">
+            <img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11267038/2020/8/5/7ef7c9f5-7425-4d7f-8158-054a7c6b77551596606845933-INVICTUS-Men-Tan-Brown-Solid-Formal-Oxfords-6591596606844534-1.jpg" alt="Product 19">
+            <h3>INVICTUS</h3>
+            <p>Men Tan-Brown Solid Formal shoes</p>
+            <p>Price: Rs.712</p>
+            <button class="wishlist-btn" onclick="addToWishlist('INVICTUS')">Add to Wishlist</button>
+    </div>
+    <div class="product" data-category="accessories">
+            <img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/19834900/2022/9/8/b2f3f3dd-f7bc-4576-bc27-aabe2e2958841662633977010JewelsGalaxyWomenGoldBracelet1.jpg" alt="Product 20">
+            <h3>JEWELS GALAXY</h3>
+            <p>Gold Bracelet</p>
+            <p>Price: Rs.514</p>
+            <button class="wishlist-btn" onclick="addToWishlist('JEWELS GALAXY')">Add to Wishlist</button>
+    </div>
+    <div class="product" data-category="accessories">
+            <img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22704988/2023/4/8/0902e65a-65c9-42ad-ab11-0e0cef6765dc1680946112791GoldCoin1.jpg" alt="Product 21">
+            <h3>CANDERE A KALYAN</h3>
+            <p>Gold Coin</p>
+            <p>Price: Rs.13786</p>
+            <button class="wishlist-btn" onclick="addToWishlist('CANDERE A KALYAN')">Add to Wishlist</button>
+    </div>
+    <div class="product" data-category="clothing">
+            <img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/2477343/2022/5/10/6f8238c5-83f6-4ea1-88c5-e7e572e412b01652166526736-Libas-Hunter-Green-Patterned-Viscose-Pathani-Kurta-With-Shir-1.jpg" alt="Product 22">
+            <h3>LIBAS</h3>
+            <p>Hunter Green Patterned Viscose Pathani Kurta</p>
+            <p>Price: Rs.532</p>
+            <button class="wishlist-btn" onclick="addToWishlist('LIBAS')">Add to Wishlist</button>
+    </div>
+    <div class="product" data-category="shoes">
+            <img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/23181000/2023/5/15/6eaa9a94-b2d6-4069-a939-eede52b086931684167523990DressBerryPinkPrintedPUBlockMuleswithBows5.jpg" alt="Product 23">
+            <h3>DRESSBERRY</h3>
+            <p>Pink Printed PUBlock Mules</p>
+            <p>Price: Rs.559</p>
+            <button class="wishlist-btn" onclick="addToWishlist('DRESSBERRY')">Add to Wishlist</button>
+    </div>
+    <div class="product" data-category="accessories">
+            <img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15755686/2023/7/11/265b8658-fd46-473c-928b-4f7f0a4fafc81689059838353-AQUASTREET-Gold-Plated--White-Layered-Waist-Chain-2121689059-1.jpg" alt="Product 24">
+            <h3>AQUASTREET</h3>
+            <p>Gold Plated White Layered Waist Chain</p>
+            <p>Price: Rs.609</p>
+            <button class="wishlist-btn" onclick="addToWishlist('AQUASTREET')">Add to Wishlist</button>
+    </div>
+    <div class="product" data-category="shoes">
+            <img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/18799128/2022/6/21/430afbf9-0084-44b2-8c35-6bece97e940d1655815158991aadiMenBlackSolidFormalDerbys7.jpg" alt="Product 25">
+            <h3>AADI</h3>
+            <p>Men Black Solid Formal shoes</p>
+            <p>Price: Rs.559</p>
+            <button class="wishlist-btn" onclick="addToWishlist('AADI')">Add to Wishlist</button>
+    </div>
+    <div class="product" data-category="clothing">
+            <img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22143832/2023/3/9/0ccfe17e-ed44-4e18-8843-a59919a647ed1678359644052-anayna-Ethnic-Motifs-Printed-Kurta-9501678359643493-1.jpg" alt="Product 26">
+            <h3>ANAYNA</h3>
+            <p>Ethnic Motifs Printed Kurta</p>
+            <p>Price: Rs.489</p>
+            <button class="wishlist-btn" onclick="addToWishlist('KALINI')">Add to Wishlist</button>
+    </div>
+    <div class="product" data-category="clothing">
+            <img src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/18964742/2022/7/5/04605eba-8701-494a-ac6a-ff3bf50ddddc1656998071679StylumWomenPurpleGeometricPrintedFlaredSleevesMirrorWorkKurt1.jpg" alt="Product 27">
+            <h3>STYLUM</h3>
+            <p>Women Purple Geometric Printed kurti</p>
+            <p>Price: Rs.758</p>
+            <button class="wishlist-btn" onclick="addToWishlist('STYLUM')">Add to Wishlist</button>
+    </div>
+    <script>
+        function addToWishlist(productName) {
+            alert(productName + " has been added to your wishlist!");
+        }
+
+        function filterProducts() {
+            const categoryFilter = document.getElementById("category-filter");
+            const selectedCategory = categoryFilter.value;
+            const productItems = document.querySelectorAll(".product");
+
+            productItems.forEach((product) => {
+                const category = product.getAttribute("data-category");
+                if (selectedCategory === "all" || selectedCategory === category) {
+                    product.style.display = "block";
+                } else {
+                    product.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
+            
+          
+          
